@@ -1,28 +1,39 @@
-# 📦 Logistics Management API
+# 📦 Delivery System API
 
-Este projeto é uma solução completa de backend para gestão de sistemas de entrega e logística. Desenvolvido com **Java** e **Spring Boot**, a API permite o controle de fluxos operacionais, desde a administração de pessoas internas até a entrega final ao cliente.
+Esta é uma API REST robusta projetada para gerenciar operações de logística e sistemas de entrega. O projeto demonstra a aplicação de padrões de arquitetura de software modernos e o uso do ecossistema Spring Boot para criar um sistema escalável e organizado.
 
-## 🚀 Camadas da Aplicação
+## 🚀 Estrutura do Projeto (Arquitetura em Camadas)
 
-O projeto segue rigorosamente os padrões de mercado, sendo dividido em:
+O sistema foi desenvolvido utilizando a separação de responsabilidades para facilitar a manutenção e testes:
 
-* **Model/Entity:** Mapeamento objeto-relacional com JPA para Clientes, Entregadores, Funcionários e Produtos.
-* **Repository:** Interfaces que estendem o `JpaRepository`, incluindo consultas customizadas (Query Methods) por e-mail e lote.
-* **Service:** Concentra toda a lógica de negócio, garantindo que as regras (como não duplicar registros) sejam respeitadas.
-* **Controller:** Endpoints REST que gerenciam as requisições HTTP e retornam respostas estruturadas.
-* **Exception Handling:** Uso de `@RestControllerAdvice` para capturar erros globais e retornar mensagens claras ao usuário.
+* **Models:** Entidades JPA que representam as tabelas do banco de dados (Cliente, Entregador, Funcionário e Produto).
+* **Repositories:** Interfaces baseadas em `JpaRepository` para abstração da camada de dados e consultas personalizadas.
+* **Services:** Camada de lógica de negócio onde são aplicadas as validações (ex: verificação de duplicidade de e-mail ou lote).
+* **Controllers:** Endpoints REST que gerenciam a comunicação entre o cliente e o servidor.
+* **Global Exception Handling:** Centralizador de erros que utiliza `@RestControllerAdvice` para retornar respostas HTTP padronizadas e amigáveis.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias e Ferramentas
 
-* **Java 17/21**
-* **Spring Boot 3**
-* **Spring Data JPA** (Persistência)
-* **H2 Database / MySQL** (Configurável via application.properties)
-* **Maven** (Gerenciador de dependências)
+* **Linguagem:** Java 17
+* **Framework:** Spring Boot 3
+* **Persistência:** Spring Data JPA / Hibernate
+* **Validação:** Custom logic em Services e Exceptions customizadas.
+* **Gerenciador de Dependências:** Maven
 
-## 📋 Módulos do Sistema
+## 📋 Módulos da API
 
-1.  **Clientes:** Gestão de perfil, endereços e preferências de pagamento.
-2.  **Entregadores:** Controle de frota (placa/veículo) e dados de contato.
-3.  **Funcionários:** Administração de recursos humanos, setores e salários.
-4.  **Produtos:** Controle de inventário, lotes e prazos de validade.
+### 👤 Clientes
+* Cadastro de perfis com endereço e forma de pagamento.
+* Busca por e-mail e gestão completa (CRUD).
+
+### 🚚 Entregadores
+* Controle de veículos e placas.
+* Gestão de dados de contato e localização.
+
+### 👥 Funcionários
+* Administração interna de RH (setor, salário, matrícula).
+* Controle de dados pessoais e profissionais.
+
+### 📦 Produtos (Inventário)
+* Gestão de estoque por categorias.
+* Controle de lotes e datas de validade para segurança logística.
