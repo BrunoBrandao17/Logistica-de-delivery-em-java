@@ -16,6 +16,7 @@ O sistema foi desenvolvido utilizando a separação de responsabilidades para fa
 
 * **Linguagem:** Java 17
 * **Framework:** Spring Boot 3
+* **Banco de Dados:** MySQL (Persistência Relacional)
 * **Persistência:** Spring Data JPA / Hibernate
 * **Validação:** Custom logic em Services e Exceptions customizadas.
 * **Gerenciador de Dependências:** Maven
@@ -37,3 +38,10 @@ O sistema foi desenvolvido utilizando a separação de responsabilidades para fa
 ### 📦 Produtos (Inventário)
 * Gestão de estoque por categorias.
 * Controle de lotes e datas de validade para segurança logística.
+
+### ⚠️ Tratamento de Erros
+A API possui um sistema de tratamento de exceções global. Caso ocorra um erro (ex: tentar cadastrar um cliente com e-mail já existente), a API retornará:
+
+Status HTTP 409 (Conflict): Para dados duplicados.
+
+Status HTTP 400 (Bad Request): Para dados inválidos.
