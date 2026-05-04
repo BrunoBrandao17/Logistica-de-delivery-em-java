@@ -14,7 +14,7 @@ O sistema foi desenvolvido utilizando a separação de responsabilidades para fa
 
 ## 🛠️ Tecnologias e Ferramentas
 
-* **Linguagem:** Java 17
+* **Linguagem:** Java
 * **Framework:** Spring Boot 3
 * **Banco de Dados:** MySQL (Persistência Relacional)
 * **Persistência:** Spring Data JPA / Hibernate
@@ -45,3 +45,5 @@ A API possui um sistema de tratamento de exceções global. Caso ocorra um erro 
 Status HTTP 409 (Conflict): Para dados duplicados.
 
 Status HTTP 400 (Bad Request): Para dados inválidos.
+
+Desenvolvido por **Bruno Machado Brandão** 🚀
