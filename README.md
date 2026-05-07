@@ -46,4 +46,10 @@ Status HTTP 409 (Conflict): Para dados duplicados.
 
 Status HTTP 400 (Bad Request): Para dados inválidos.
 
-Desenvolvido por **Bruno Machado Brandão** 🚀
+⚙️ Como Executar
+1. Clonar o Repositório
+2. Configure o banco de dados no application.properties
+3. Configurar o Banco de Dados (CREATE DATABASE SistemaEntrega;)
+4. Executar: mvn spring-boot:run
+
+Desenvolvido por **Bruno Machado Brandão 📩Brunomachad17@gmail.com** 🚀
